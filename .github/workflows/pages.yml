@@ -26,7 +26,7 @@ jobs:
           mkdir -p dist/design-concepts
           cp preview.html dist/index.html
           cp preview.html dist/preview.html
-          cp preview.css atmosphere.css concept-story.css works-wave.css member-transition.css dist/
+          cp preview.css atmosphere.css concept-story.css works-wave.css member-transition.css typography.css dist/
           cp preview.js works-wave.js member-transition.js concept-story.js smooth-scroll.js hero-particles.js concept-liquid.js dist/
           cp -R assets dist/assets
           cp design-concepts/members-original-transparent.png dist/design-concepts/
