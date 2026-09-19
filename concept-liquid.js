@@ -1,4 +1,4 @@
-// Public prototype: original code-generated abstract green backgrounds.
+// Temporary archive visuals; source and rights notes: assets/concept/README.md.
 (() => {
   const section=document.querySelector('#concept');
   const pin=document.querySelector('.birth-pin');
@@ -43,7 +43,13 @@
   let textures=[],images=[],ready=false,frame=0;
   const clamp=x=>Math.max(0,Math.min(1,x));
   const smooth=x=>{x=clamp(x);return x*x*(3-2*x);};
-  const urls=[1,2,3,4,5].map(n=>'assets/concept/abstract-'+n+'.svg');
+  const urls=[
+    'assets/archive/imported/main-2022-visual.webp',
+    'assets/archive/imported/main-2024-visual.webp',
+    'assets/archive/imported/extra-2019-visual.jpg',
+    'assets/archive/imported/main-2018-visual.jpg',
+    'assets/archive/imported/main-2019-visual.png'
+  ];
   let program,loc;
   function shader(type,source){
     const s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);

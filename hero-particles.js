@@ -35,8 +35,8 @@
   function layout(){
     const r=art.getBoundingClientRect();width=r.width;height=r.height;
     const mobile=width<=700;
-    size=mobile?Math.min(width*1.02,height*.74):Math.min(width*.70,height*.98);
-    cx=width*(mobile?.61:.65);cy=height*(mobile?.72:.52);
+    size=mobile?Math.min(width*.94,height*.64):Math.min(width*.70,height*.98);
+    cx=width*(mobile?.50:.65);cy=height*(mobile?.69:.52);
     const dpr=Math.min(devicePixelRatio||1,2);
     canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);
     ctx.setTransform(dpr,0,0,dpr,0,0);

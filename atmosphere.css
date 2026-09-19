@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@300;400&display=swap');
 
 :root{--paper:#bcced0;--ink:#304a4c;--green:#f5f5e9;--line:#38585c24;--muted:#526d70;--serif:'Cormorant Garamond','Noto Serif JP',serif}
+/* Background chapters follow the viewport, not a desktop artboard. */
+main,footer{width:100%;max-width:none;margin-inline:0}
 body{background-color:var(--paper);background-image:linear-gradient(90deg,transparent calc(100% - 1px),#38585c15 1px),linear-gradient(transparent calc(100% - 1px),#38585c15 1px);background-size:20vw 250px;font-family:'Noto Serif JP',serif;font-weight:300}
 body:after{opacity:.26;mix-blend-mode:multiply}
 body:before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 25% 20%,#e5eeea70,transparent 60%),radial-gradient(ellipse at 80% 85%,#9db9c640,transparent 65%)}
@@ -114,6 +116,31 @@ nav a:hover,.footer-nav a:hover{color:#167a36}
 @media(max-width:700px){.donation-panel{grid-template-columns:1fr;gap:25px}.donation-content{padding:30px 0}.donation-panel h3{font-size:18px}}
 .concept-liquid:after{content:'';position:absolute;inset:0;background:rgba(15,24,24,.32)}
 .birth-content #concept.liquid-ready .story-copy p,.birth-content #concept.liquid-ready .section-top{color:#fffdf5;text-shadow:0 2px 15px #18232380}
+@media(min-width:1900px){
+ .hero h1{font-size:clamp(70px,4.5vw,120px)}
+ .hero-bottom>div{font-size:clamp(12px,1vw,20px)}
+ .hero-bottom>div span{font-size:clamp(11px,.8vw,16px)}
+ .concept-story .story-copy{max-width:1200px}
+}
+@media(max-width:700px){
+ .birth-intro #top{padding-top:clamp(140px,24svh,225px);padding-inline:7%}
+ .hero h1{max-width:100%;font-size:clamp(30px,9vw,48px)}
+ .hero-bottom{max-width:100%}
+ .hero-bottom>div{font-size:13px}
+ .hero-bottom>div span{font-size:12px}
+ #access .access-block p,#access .access-block li{font-size:14px}
+ #announce .donation-panel p{font-size:14px}
+ .donation-panel a{overflow-wrap:anywhere;min-height:44px}
+ #archives .archive-stage{width:88vw;height:72svh;aspect-ratio:auto;top:55%}
+ #archives .archive-stage>svg{position:absolute;inset:0;width:100%;height:40%;overflow:visible}
+ #archives .archive-catalog{top:43%;left:0;width:100%;height:57%;max-height:none;gap:12px}
+ #archives .archive-catalog a{min-height:44px;align-items:start;padding:7px 3px;gap:5px}
+ #archives .archive-catalog a span{font-size:12px;white-space:normal;overflow:visible}
+ #archives .archive-column h3{font-size:11px}
+ #contents .footer-nav a{min-height:44px;display:flex;align-items:center}
+ dialog{width:94vw;max-height:90svh}
+ .close-detail{min-height:44px;min-width:60px;top:8px}
+}
 .chapter-stack{position:relative;isolation:isolate}
 .chapter-stack>#announce,.chapter-stack>#access{
  position:sticky;top:var(--chapter-pin-top,0px);min-height:100svh;
