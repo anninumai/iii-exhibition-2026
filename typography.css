@@ -13,8 +13,12 @@
   --serif:'Barlow','Zen Kaku Gothic Antique',sans-serif;
 }
 html,body{background-color:var(--mv-paper);color:var(--mv-ink)}
-body{font-family:'Zen Kaku Gothic Antique',sans-serif;font-size:16px;font-weight:400}
-body :where(h1,h2,h3,h4,button,a,.section-top,.eyebrow,.coordinate,.hero-bottom>a,.footer-small,.archive-links a,.wave-count){font-family:'Barlow','Zen Kaku Gothic Antique',sans-serif}
+body{font-family:'Zen Kaku Gothic Antique',sans-serif;font-size:16px;font-weight:700}
+body :where(h1,h2,h3,h4,button,a,.section-top,.eyebrow,.coordinate,.hero-bottom>a,.footer-small,.archive-links a,.wave-count){font-family:'Barlow','Zen Kaku Gothic Antique',sans-serif;font-weight:600}
+body :where(p,li,small,figcaption,dd,dt){font-family:'Zen Kaku Gothic Antique',sans-serif;font-weight:700}
+/* These selectors replace older section-level font shorthands. */
+#concept .story-copy p,.detail-grid p,.access-block p,.access-block li{font-family:'Zen Kaku Gothic Antique',sans-serif!important;font-weight:700}
+.journey-morph .thread-names{font-family:'Zen Kaku Gothic Antique',sans-serif!important;font-weight:700}
 body :where(h1,h2,h3,h4){font-weight:600}
 button,a{color:var(--mv-ink)}
 header{color:var(--mv-ink)}
