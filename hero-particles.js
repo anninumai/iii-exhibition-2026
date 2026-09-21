@@ -133,7 +133,7 @@
         const sx=width*.5+Math.cos(theta)*funnel;
         const sy=height*(.88-level*.78)+Math.sin(theta)*height*.055;
         renderX+=(sx-renderX)*merge;renderY+=(sy-renderY)*merge;
-        ctx.fillStyle='rgba('+Math.round(60+195*merge)+','+Math.round(185+70*merge)+','+Math.round(50+205*merge)+','+(.3+p.seed*.5)+')';
+        ctx.fillStyle='rgba(50,193,39,'+(.3+p.seed*.5)+')';
       }
       ctx.globalAlpha=1-end;
       // Uniform rendering everywhere, including behind foreground text.

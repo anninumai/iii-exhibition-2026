@@ -28,7 +28,7 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
    await image.decode();
    const d=document.querySelector('#contour').getAttribute('d');
    const paths='<path d="'+d+'"/>';
-   const svg='<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="580"><g fill="none" stroke="#40b83a" stroke-width="1.2">'+paths+'</g></svg>';
+   const svg='<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="580"><g fill="none" stroke="#32C127" stroke-width="1.2">'+paths+'</g></svg>';
    const target=new Image();target.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);await target.decode();
    const a=sample(image),b=sample(target);if(!a.length||!b.length)throw Error('Empty artwork');
    const count=Math.min(14000,Math.max(a.length,b.length));

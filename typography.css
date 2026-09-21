@@ -1,5 +1,37 @@
+/* MV regulation: web fallback fonts and exact palette. */
+:root{
+  --mv-green:#32C127;
+  --mv-red:#EF3C18;
+  --mv-blue:#2727F2;
+  --mv-paper:#FFFFFF;
+  --mv-ink:#052D03;
+  --paper:var(--mv-paper);
+  --ink:var(--mv-ink);
+  --green:var(--mv-green);
+  --line:#052D0330;
+  --muted:#052D03B8;
+  --serif:'Barlow','Zen Kaku Gothic Antique',sans-serif;
+}
+html,body{background-color:var(--mv-paper);color:var(--mv-ink)}
+body{font-family:'Zen Kaku Gothic Antique',sans-serif;font-size:16px;font-weight:400}
+body :where(h1,h2,h3,h4,button,a,.section-top,.eyebrow,.coordinate,.hero-bottom>a,.footer-small,.archive-links a,.wave-count){font-family:'Barlow','Zen Kaku Gothic Antique',sans-serif}
+body :where(h1,h2,h3,h4){font-weight:600}
+button,a{color:var(--mv-ink)}
+header{color:var(--mv-ink)}
+header a,.footer-nav a,.footer-brand{color:var(--mv-ink)}
+.brand{font-style:normal;font-weight:600;letter-spacing:-.04em}
+.menu-link{color:var(--mv-ink);border-color:var(--mv-ink)}
+nav a:hover,.footer-nav a:hover{color:var(--mv-red)}
+/* Green is reserved for shapes, particles and contour lines; text remains dark. */
+#top,#concept.concept-story,#works,#announce,#access,#members,#archives,#contents{background-color:var(--mv-paper)}
+#concept.concept-story{background-color:var(--mv-green)}
+#access .section-top,#access h2,#access h3,#archives{color:var(--mv-ink)}
+#archives .contours use{stroke:var(--mv-green)}
+#archives .archive-links a{color:var(--mv-ink)}
+.text-link,.wave-view,.wave-filters button,.spatial-back{border-color:#052D0366!important}
+.wave-filters button[aria-pressed=true],.spatial-gallery .wave-filters button[aria-pressed=true]{background:var(--mv-ink);color:#fff}
+#works .wave-card:hover{outline-color:var(--mv-blue)}
 /* Readable type scale for the shared prototype. */
-body{font-size:16px}
 nav{font-size:16px;gap:clamp(16px,2vw,32px)}
 .brand span{font-size:13px}
 .menu-link{font-size:16px}
